@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherApp</title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    <div class="weather-container">
+        <form class="search">
+            <input type="text" name="city-search" id="city-search" placeholder="Buscar ciudad">
+            <button id="search-btn">Buscar</button>
+        </form>
+
+        <div id="weather-info" class="weather-info">
+            <h2 id="city-name" class="city-name">Test</h2> 
+            <p class="coords">Coordenadas: <span id="coords" class="coords"></span> </p>
+            <div id="temp-data" class="temp-data">
+                <p>Temperatura: <span id="temp" class="temp" ></span>  .</p>
+                <p>Sensación térmica:  <span     id="feels_like" class="feels_like"></span>.</p>
+                <p>Temperatura mínima: <span    id="min_temp" class="min_temp"></span>.</p>
+                <p>Temperatura máxima: <span    id="max_temp" class="max_temp"></span>.</p>
+            </div>
+            <div id="wind-data" class="wind-data">
+                <p>Velocidad del viento: <span id="wind-speed" class="wind-speed"></span> nudos.</p>
+                <p>Ráfaga de viento: <span id="wind-gust" class="wind-gust"></span>m/s.</p>
+            </div>
+            <div id="conditions-data" class="conditions-data">
+                <p>Presión: <span id="pressure" class="pressure"></span>.</p>
+                <p>Humedad: <span id="humidity" class="humidity"></span>.</p>
+                <img id="weather-icon" src="" alt="Icono clima"><p>Clima:<span id="weather" class="weather"></span>.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/apps.js"></script>
+</body>
+</html>
