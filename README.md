@@ -28,11 +28,11 @@ git clone https://github.com/javilopezleza/weatherAppJll
 ```
 2. Instala dependencias si usas SASS o bien un preprocesador (opcional):
 ```bash
-    npm install -g sass
+npm install -g sass
 ```
 3. Compila SASS a CSS:
 ```bash
-    sass scss/style.scss css/style.css
+sass scss/style.scss css/style.css
 ```
 4. Abre `index.html` en tu navegador.
 > ⚠️ Recuerda configurar tu API Key de OpenWeather en el Environments de Netlify.
