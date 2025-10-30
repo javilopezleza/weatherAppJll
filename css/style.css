@@ -5,6 +5,7 @@
   align-items: center;
   height: 100vh;
   padding: 0 2rem;
+  flex-direction: row;
 }
 .weather-container .search {
   display: flex;
@@ -78,6 +79,87 @@
   animation: bounceIn 0.8s ease forwards;
 }
 
+/* === RESPONSIVE DESIGN === */
+/* Tablets (<= 1024px) */
+@media (max-width: 1024px) {
+  .weather-container {
+    flex-direction: column;
+    height: auto;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+  .weather-container .search {
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+  .weather-container .search input {
+    width: 60%;
+    font-size: 0.95rem;
+  }
+  .weather-container .search button {
+    padding: 0.7rem 1rem;
+  }
+  .weather-container .weather-info {
+    margin-left: 0;
+    max-width: 90%;
+    align-items: center;
+  }
+  .weather-container .weather-info .city-name {
+    font-size: 1.8rem;
+  }
+  .weather-container .weather-info .coords,
+  .weather-container .weather-info .temp-data,
+  .weather-container .weather-info .wind-data,
+  .weather-container .weather-info .conditions-data {
+    font-size: 1rem;
+  }
+}
+/* Smartphones (<= 600px) */
+@media (max-width: 600px) {
+  .weather-container {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 1.5rem 1rem;
+    height: auto;
+  }
+  .weather-container .search {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    gap: 0.5rem;
+  }
+  .weather-container .search input {
+    width: 100%;
+    font-size: 0.9rem;
+    padding: 0.7rem 1rem;
+  }
+  .weather-container .search button {
+    width: 100%;
+    font-size: 0.95rem;
+    padding: 0.7rem 1rem;
+  }
+  .weather-container .weather-info {
+    align-items: center;
+    text-align: center;
+    margin: 1rem 0 0 0;
+    max-width: 100%;
+    padding: 0 0.5rem;
+  }
+  .weather-container .weather-info .city-name {
+    font-size: 1.6rem;
+  }
+  .weather-container .weather-info .coords,
+  .weather-container .weather-info .temp-data,
+  .weather-container .weather-info .wind-data,
+  .weather-container .weather-info .conditions-data {
+    font-size: 0.95rem;
+  }
+  .weather-container .weather-info #weather-icon {
+    width: 60px;
+    height: 60px;
+  }
+}
 /* Animación del icono */
 @keyframes bounceIn {
   0% {
