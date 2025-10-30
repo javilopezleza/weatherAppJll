@@ -22,12 +22,13 @@ const pressure = document.getElementById("pressure");
 const humidity = document.getElementById("humidity");
 const weather = document.getElementById("weather");
 const weatherIcon = document.getElementById("weather-icon");
-
+//Form
+const searchForm = document.getElementById("search");
 
 
 
 async function getWeather(city) {
-  const response = await fetch(`/.netlify/functions/getWeather?city=${city}`);
+  const response = await fetch(`/api/getWeather?city=${city}`);
   const data = await response.json();
   weatherInfo.style.display = "block"
   setData(data);
@@ -35,6 +36,14 @@ async function getWeather(city) {
   weatherInfoElement.classList.add("visible");
 }
 
+searchForm.addEventListener("submit",
+  (e) => {
+    e.preventDefault();
+
+    const city = input.value.trim();
+    if(city) getWeather(city);
+  }
+ )
 
 
 document.querySelector("#search-btn").addEventListener("click", () => {
